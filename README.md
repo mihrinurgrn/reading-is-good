@@ -21,7 +21,7 @@ In order to run this project, you will need the following software installed on 
 
 ### Technologies
 
-- Sprinboot
+- Springboot
 - Postgresql
 - JPA Hibernate
 - Lombok
@@ -32,7 +32,7 @@ In order to run this project, you will need the following software installed on 
 - Order table is include some informations about orders like book, customer 
 - Book table is include some informations about book like bookname, stock
 
-Also every entity extends Base Entity in Jpa Entities Base entity is includes some usual informations that can be in every entity like Created_at Created_by Modified_at
+Also every entity extends Base Entity in Jpa Entities Base entity is includes some usual informations that can be in every entity like Created_at, Created_by, Modified_at
 
 ### Request And Response Types 
 
@@ -70,9 +70,12 @@ docker-compose up --build
 After completing the above steps, you can use the postman collection 
 
 - First, you perform user registration with customer create.
-- Then you login and get **jwt token**.
-- And you can add a book
-- Update stock of a book with bookId (You can increase or decrease the stock)
+- You can login and get **jwt token**.
+- You can add a book
+- You can update stock of a book with bookId (You can increase or decrease the stock)
 - You can create an order
 - You can see monthly statistics
 - You can also make other operations that you see in the postman colllection
+
+### Swagger Open Api Documentation
+http://localhost:8080/v2/api-docs
