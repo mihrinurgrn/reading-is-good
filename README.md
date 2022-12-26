@@ -19,6 +19,37 @@ In order to run this project, you will need the following software installed on 
 - Apache Maven
 - Docker
 
+### Technologies
+
+- Sprinboot
+- Postgresql
+- JPA Hibernate
+- Lombok
+
+### Database Design
+
+- Customer table is include some informations about customers like username, password 
+- Order table is include some informations about orders like book, customer 
+- Book table is include some informations about book like bookname, stock
+
+Also every entity extends Base Entity in Jpa Entities Base entity is includes some usual informations that can be in every entity like Created_at Created_by Modified_at
+
+### Request And Response Types 
+
+Every andpoint has own request and reponse type also every response is look like this
+
+```JSON
+{
+    "code": 200,
+    "data": [
+        {
+        }
+    ],
+    "message": null,
+    "timeStamp": 1665324335570
+}
+```
+
 ### Installing And Running
 
 1. Clone the repository 
