@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "cea2a116-1e0d-4f21-8151-e64e04283da3",
+		"name": "Getir Case",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Monthly Statistics",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Create Customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "access-control-allow-credentials",
+						"value": "true",
+						"type": "text"
+					},
+					{
+						"key": "access-control-allow-origin",
+						"value": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+						"type": "text"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache, no-store, max-age=0, must-revalidate",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerName\" : \"test\",\n    \"customerSurname\" : \"test2\",\n    \"username\" : \"test\" ,\n    \"password\" : \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers/sign-up",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Book",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Incraese Book Stock",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/books/stock",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"books",
+						"stock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Orders of a Customer",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/orders/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order By Order Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/orders/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Orders In Date Interval",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/orders/2016-11-09/2016-11-09",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"orders",
+						"2016-11-09",
+						"2016-11-09"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "access-control-allow-credentials",
+						"value": "true",
+						"type": "text"
+					},
+					{
+						"key": "access-control-allow-origin",
+						"value": "chrome-extension://fhbjgbiflinjbdggehcddcbncdddomop",
+						"type": "text"
+					},
+					{
+						"key": "cache-control",
+						"value": "no-cache, no-store, max-age=0, must-revalidate",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"case\",\n    \"password\":\"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
