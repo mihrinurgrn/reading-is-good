@@ -9,6 +9,8 @@ vision operations.
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
+Also you can find json file for import Postman Collection and you can test endpoints.
+
 ### Prerequisites
 
 In order to run this project, you will need the following software installed on your machine:
@@ -17,14 +19,29 @@ In order to run this project, you will need the following software installed on 
 - Apache Maven
 - Docker
 
-### Installing
+### Installing And Running
 
-1. Clone the repository
+1. Clone the repository 
 
-```bash
-git clone https://github.com/your-username/reading-is-good.git
+```shell
+git clone https://github.com/mihrinurgrn/reading-is-good.git
+```
 
-cd reading-is-good
-docker build -t reading-is-good .
-docker run -p 8080:8080 reading-is-good
-Access the application in your web browser at http://localhost:8080
+2. Run the following in order.
+
+```shell
+mvn clean package
+```
+
+```shell
+docker-compose up --build
+```
+After completing the above steps, you can use the postman collection 
+
+- First, you perform user registration with customer create.
+- Then you login and get **jwt token**.
+- And you can add a book
+- Update stock of a book with bookId (You can increase or decrease the stock)
+- You can create an order
+- You can see monthly statistics
+- You can also make other operations that you see in the postman colllection
